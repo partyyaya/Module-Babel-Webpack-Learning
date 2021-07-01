@@ -125,3 +125,40 @@ output: {
   filename: '[name].js'
 }
 ```
+- 2.loader(使用 Babel 作範例)
+  - loader官網: [loader](https://www.webpackjs.com/loaders/)
+  - 使用目的: loader 讓 webpack 能夠去處理那些非 JS 文件的模塊
+  - 1.安裝 babel-loader (讓webpack能使用Babel)
+  ```txt
+  npm install --save-dev babel-loader@8.1.0
+  ```
+  - 2.安装 Babel
+  ```txt
+  npm install --save-dev @babel/core@7.11.0 @babel/preset-env@7.11.0
+  ```
+  - 3.配置 babel-loader (在 webpack.config.js 新增)
+  ```js
+  module: {
+    rules: [
+      {
+        test: /\.js$/, // 使用正則表達式讓webpack尋找.js的程式
+        exclude: /node_modules/, // 排除node_modules資料夾內的js檔案
+        loader: 'babel-loader' //使用babel-loader編譯成es5
+      }
+    ]
+  }
+  ```
+  - 4.引入 core-js
+  ```txt
+  安裝 core
+  npm install --save-dev core-js@3.6.5
+  於需要編譯的js檔加入
+  import "core-js/stable"
+  ```
+  - 5.進行編譯與打包
+  ```txt
+  npm run webpack
+  ```
+  
+
+
