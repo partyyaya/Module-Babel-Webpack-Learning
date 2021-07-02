@@ -394,6 +394,5 @@ npm install --save-dev webpack-dev-server
 },
 ```
 - 備註
-> webpack-dev-server 在 webpack.config.js 有默認設定
-若要改變則新增 devServer:{} 自行設定
+> webpack-dev-server 在 webpack.config.js 有默認設定，若要改變則新增 devServer:{} 自行設定
 > [devServer 詳細設定參考](https://www.webpackjs.com/configuration/dev-server/)
