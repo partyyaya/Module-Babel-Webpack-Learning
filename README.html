@@ -1,0 +1,875 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\cgh\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.21\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h2 class="mume-header" id="babel-webpack">babel &amp; webpack</h2>
+
+<hr>
+<p><a id="top" href></a></p>
+<h3 class="mume-header" id="%E7%9B%AE%E9%8C%84">&#x76EE;&#x9304;</h3>
+
+<ul>
+<li>
+<h4><a href="#babel-start">babel</a></h4>
+</li>
+<li>
+<h4><a href="#webpack-start">webpack</a></h4>
+</li>
+</ul>
+<hr>
+<h3 class="mume-header" id="a-idbabel-start-hreftop-babela"><a id="babel-start" href="#top">babel</a></h3>
+
+<h4 class="mume-header" id="%E4%BB%8B%E7%B4%B9">&#x4ECB;&#x7D39;</h4>
+
+<ul>
+<li>&#x5B98;&#x7DB2;: <a href="https://babeljs.io/">babel</a></li>
+<li>&#x7DDA;&#x4E0A;&#x7DE8;&#x8B6F;: <a href="https://babeljs.io/repl">babel-online</a></li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">Babel &#x662F; JavaScript &#x7684;&#x7DE8;&#x8B6F;&#x5668;
+&#x7528;&#x4F86;&#x5C07; ES6 &#x7684;&#x4EE3;&#x78BC;&#xFF0C;&#x8F49;&#x63DB;&#x6210; ES6 &#x4E4B;&#x524D;&#x7684;&#x4EE3;&#x78BC;
+
+&#x4F46;&#x5C0D;&#x65BC; ES6 &#x65B0;&#x589E;&#x7684; API&#xFF0C;&#x5982; Set&#x3001;Map&#x3001;Promise &#x7B49;&#x5168;&#x5C40;&#x5C0D;&#x8C61;
+&#x53CA;&#x4E00;&#x4E9B;&#x5B9A;&#x7FA9;&#x5728;&#x5168;&#x5C40;&#x5C0D;&#x50CF;&#x4E0A;&#x7684;&#x65B9;&#x6CD5;&#xFF08;&#x6BD4;&#x5982; Object.assign/Array.from&#xFF09;
+&#x90FD;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x7DE8;&#x8B6F;&#xFF0C;&#x9700;&#x8981;&#x85C9;&#x52A9;&#x5176;&#x5B83;&#x7684;&#x6A21;&#x584A;
+Babel &#x4E00;&#x822C;&#x9700;&#x914D;&#x5408; Webpack &#x4F86;&#x7DE8;&#x8B6F;&#x6A21;&#x584A;&#x8A9E;&#x6CD5;
+</pre><br>
+<h4 class="mume-header" id="%E4%BD%BF%E7%94%A8">&#x4F7F;&#x7528;</h4>
+
+<ul>
+<li>
+<ol>
+<li>&#x5B89;&#x88DD;node: <a href="https://nodejs.org/en/">node</a></li>
+</ol>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x900F;&#x904E;&#x6307;&#x4EE4;&#x6AA2;&#x67E5;&#x662F;&#x5426;&#x5B89;&#x88DD;&#x6210;&#x529F;</li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">&#x6AA2;&#x67E5; node &#x7248;&#x672C;: node -v
+&#x6AA2;&#x67E5; npm &#x7248;&#x672C;: npm -v
+</pre></li>
+<li>
+<ol start="2">
+<li>&#x521D;&#x59CB;&#x5316;&#x9805;&#x76EE;(&#x751F;&#x6210; package.json ): npm init</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>&#x5B89;&#x88C5; Babel(&#x5BEB;&#x5165;package.json)</li>
+</ol>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">npm install --save-dev @babel/core @babel/cli
+npm install --save-dev @babel/core@7.11.0 @babel/cli@7.10.5
+</pre></li>
+<li>
+<ol start="4">
+<li>&#x7DE8;&#x8B6F; ES6</li>
+</ol>
+<ul>
+<li>
+<ol>
+<li>Babel &#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">&#x914D;&#x7F6E;&#x8F49;&#x8B6F;&#x5305;:
+npm install @babel/preset-env@7.11.0 --save-dev
+&#x5275;&#x5EFA;&#x914D;&#x7F6E;&#x6587;&#x4EF6; .babelrc &#x4E26;&#x914D;&#x7F6E;:
+{&quot;presets&quot;: [&quot;@babel/preset-env&quot;]}
+</pre><ul>
+<li>
+<ol start="2">
+<li>&#x5728; package.json &#x6587;&#x4EF6;&#x4E2D; scripts &#x6DFB;&#x52A0; babel &#x7684;&#x547D;&#x4EE4;</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">&#x5169;&#x53E5;&#x6307;&#x4EE4;&#x76F8;&#x7B49;(-d = --out-dir = &#x8F38;&#x51FA;&#x76EE;&#x9304;)
+babel src -d dist
+babel src --out-dir dist
+</pre><ul>
+<li>
+<ol start="3">
+<li>&#x57F7;&#x884C; npm run build &#x5373;&#x53EF;&#x7DE8;&#x8B6F;&#x4F7F;&#x7528;babel</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="mume-header" id="a-idwebpack-start-hreftop-webpacka"><a id="webpack-start" href="#top">webpack</a></h3>
+
+<h4 class="mume-header" id="%E4%BB%8B%E7%B4%B9-1">&#x4ECB;&#x7D39;</h4>
+
+<ul>
+<li>&#x5B98;&#x7DB2;: <a href="https://webpack.js.org/">webpack</a></li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">webpack &#x662F;&#x975C;&#x614B;&#x6A21;&#x584A;&#x6253;&#x5305;&#x5668;
+webpack &#x8655;&#x7406;&#x6642;&#xFF0C;&#x6703;&#x5C07;&#x6240;&#x6709;&#x6A21;&#x584A;&#x6253;&#x5305;&#x6210;&#x4E00;&#x6216;&#x591A;&#x500B;&#x6587;&#x4EF6;
+</pre><br>
+<h4 class="mume-header" id="%E5%88%9D%E5%A7%8B%E5%8C%96">&#x521D;&#x59CB;&#x5316;</h4>
+
+<ul>
+<li>
+<ol>
+<li>&#x5B89;&#x88DD;node: <a href="https://nodejs.org/en/">node</a></li>
+</ol>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x900F;&#x904E;&#x6307;&#x4EE4;&#x6AA2;&#x67E5;&#x662F;&#x5426;&#x5B89;&#x88DD;&#x6210;&#x529F;</li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">&#x6AA2;&#x67E5; node &#x7248;&#x672C;: node -v
+&#x6AA2;&#x67E5; npm &#x7248;&#x672C;: npm -v
+</pre></li>
+<li>
+<ol start="2">
+<li>&#x521D;&#x59CB;&#x5316;&#x9805;&#x76EE;(&#x751F;&#x6210; package.json ): npm init</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>&#x5B89;&#x88C5; webpack(&#x5BEB;&#x5165;package.json)</li>
+</ol>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">npm install --save-dev webpack-cli@3.3.12 webpack@4.44.1
+</pre></li>
+<li>
+<ol start="4">
+<li>&#x914D;&#x7F6E; webpack</li>
+</ol>
+<ul>
+<li>
+<ol>
+<li>&#x5275;&#x5EFA;  webpack.config.js &#x6A94;&#x6848;</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;path&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// mode: &apos;development&apos; &#x4EE3;&#x8868;&#x55AE;&#x7D14;&#x7DE8;&#x8B6F;&#x4E0D;&#x6DF7;&#x6DC6;&#x4E0D;&#x58D3;&#x7E2E;(&#x4E0D;&#x5BEB;&#x5247;&#x9ED8;&#x8A8D;&#x6DF7;&#x6DC6;&#x4E26;&#x58D3;&#x7E2E;)</span>
+<span class="token comment">// entry: &#x4EE3;&#x8868;&#x9700;&#x8981;&#x7DE8;&#x8B6F;&#x7684;&#x6A94;&#x6848;&#x8DEF;&#x5F91;</span>
+<span class="token comment">// output: &#x8F38;&#x51FA;&#x8DEF;&#x5F91;(&#x5EFA;&#x7ACB;dist&#x8CC7;&#x6599;&#x593E;&#x4E26;&#x65B0;&#x589E;&#x7DE8;&#x8B6F;&#x5B8C;&#x6210;&#x7684;&#x6587;&#x4EF6; bundle.js)</span>
+module<span class="token punctuation">.</span><span class="token property-access">exports</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  mode<span class="token operator">:</span> <span class="token string">&apos;development&apos;</span><span class="token punctuation">,</span>
+  entry<span class="token operator">:</span> <span class="token string">&apos;./src/index.js&apos;</span><span class="token punctuation">,</span>
+  output<span class="token operator">:</span> <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&apos;dist&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    filename<span class="token operator">:</span> <span class="token string">&apos;bundle.js&apos;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</pre><ul>
+<li>
+<ol start="2">
+<li>&#x5728; package.json &#x6587;&#x4EF6;&#x4E2D; scripts &#x6DFB;&#x52A0; webpack &#x7684;&#x547D;&#x4EE4;</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">&#x5169;&#x53E5;&#x6307;&#x4EE4;&#x76F8;&#x7B49;
+(&#x9810;&#x8A2D;&#x6307;&#x5411; webpack.config.js &#x82E5;&#x8981;&#x6539;&#x5176;&#x4ED6;&#x540D;&#x5B57;&#x5247;&#x53EF;&#x7528; --config)
+&quot;webpack&quot;: &quot;webpack --config webpack.config.js&quot; 
+&quot;webpack&quot;: &quot;webpack&quot; 
+</pre></li>
+<li>
+<ol start="5">
+<li>&#x7DE8;&#x8B6F;</li>
+</ol>
+<ul>
+<li>npm run webpack</li>
+</ul>
+</li>
+</ul>
+<br>
+<h4 class="mume-header" id="%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5">&#x6838;&#x5FC3;&#x6982;&#x5FF5;</h4>
+
+<ul>
+<li>
+<ol>
+<li>entry &amp; output</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token comment">// entry</span>
+<span class="token comment">// &#x55AE;&#x5165;&#x53E3;</span>
+entry<span class="token operator">:</span> <span class="token string">&apos;./src/index.js&apos;</span><span class="token punctuation">,</span>
+<span class="token comment">// &#x591A;&#x5165;&#x53E3;</span>
+entry<span class="token operator">:</span> <span class="token punctuation">{</span>
+  main<span class="token operator">:</span> <span class="token string">&apos;./src/index.js&apos;</span><span class="token punctuation">,</span>
+  search<span class="token operator">:</span> <span class="token string">&apos;./src/search.js&apos;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+<span class="token comment">// output</span>
+<span class="token comment">// &#x82E5;&#x53EA;&#x6709;&#x55AE;&#x5165;&#x53E3;</span>
+output<span class="token operator">:</span> <span class="token punctuation">{</span>
+  path<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&apos;dist&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  filename<span class="token operator">:</span> <span class="token string">&apos;bundle.js&apos;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// &#x82E5;&#x6709;&#x591A;&#x5165;&#x53E3;</span>
+<span class="token comment">// [name] &#x6703;&#x6BD4;&#x5C0D;&#x53D6;&#x5F97;&#x591A;&#x5165;&#x53E3;&#x7684;&#x540D;&#x5B57;:&#x6BD4;&#x5982;&#x5728;entry &#x88E1;&#x9762;&#x5B9A;&#x7FA9; search&#x5165;&#x53E3; &#x5247;&#x6703;&#x8F38;&#x51FA;search.js</span>
+<span class="token comment">// [name] &#x82E5;&#x53EA;&#x6709;&#x55AE;&#x5165;&#x53E3;&#x5247;&#x9810;&#x8A2D;&#x70BA; main.js</span>
+output<span class="token operator">:</span> <span class="token punctuation">{</span>
+  path<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&apos;dist&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  filename<span class="token operator">:</span> <span class="token string">&apos;[name].js&apos;</span>
+<span class="token punctuation">}</span>
+</pre><ul>
+<li>
+<ol start="2">
+<li>loader(&#x4F7F;&#x7528; Babel &#x505A;&#x53C3;&#x8003;)</li>
+</ol>
+<ul>
+<li>loader&#x5B98;&#x7DB2;: <a href="https://www.webpackjs.com/loaders/">loader</a></li>
+<li>&#x4F7F;&#x7528;&#x76EE;&#x7684;: loader &#x8B93; webpack &#x80FD;&#x5920;&#x53BB;&#x8655;&#x7406;&#x90A3;&#x4E9B;&#x975E; JS &#x6587;&#x4EF6;&#x7684;&#x6A21;&#x584A;</li>
+<li>
+<ol>
+<li>&#x5B89;&#x88DD; babel-loader (&#x8B93;webpack&#x80FD;&#x4F7F;&#x7528;Babel)</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">npm install --save-dev babel-loader@8.1.0
+</pre><ul>
+<li>
+<ol start="2">
+<li>&#x5B89;&#x88C5; Babel</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">npm install --save-dev @babel/core@7.11.0 @babel/preset-env@7.11.0
+</pre><ul>
+<li>
+<ol start="3">
+<li>&#x914D;&#x7F6E; babel-loader (&#x5728; webpack.config.js &#x65B0;&#x589E;)</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">module<span class="token operator">:</span> <span class="token punctuation">{</span>
+  rules<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.js$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token comment">// &#x4F7F;&#x7528;&#x6B63;&#x5247;&#x8868;&#x9054;&#x5F0F;&#x8B93;webpack&#x5C0B;&#x627E;.js&#x7684;&#x7A0B;&#x5F0F;</span>
+      exclude<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">node_modules</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token comment">// &#x6392;&#x9664;node_modules&#x8CC7;&#x6599;&#x593E;&#x5167;&#x7684;js&#x6A94;&#x6848;</span>
+      loader<span class="token operator">:</span> <span class="token string">&apos;babel-loader&apos;</span> <span class="token comment">//&#x4F7F;&#x7528;babel-loader&#x7DE8;&#x8B6F;&#x6210;es5</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</pre><ul>
+<li>
+<ol start="4">
+<li>&#x5F15;&#x5165; core-js</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">&#x5B89;&#x88DD; core
+npm install --save-dev core-js@3.6.5
+&#x65BC;&#x9700;&#x8981;&#x7DE8;&#x8B6F;&#x7684;js&#x6A94;&#x52A0;&#x5165;
+import &quot;core-js/stable&quot;
+</pre><ul>
+<li>
+<ol start="5">
+<li>&#x9032;&#x884C;&#x7DE8;&#x8B6F;&#x8207;&#x6253;&#x5305;</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">npm run webpack
+</pre></li>
+<li>
+<ol start="3">
+<li>plugins(&#x4F7F;&#x7528; html&#x63D2;&#x4EF6; &#x505A;&#x53C3;&#x8003;)</li>
+</ol>
+<ul>
+<li>&#x4F7F;&#x7528;&#x76EE;&#x7684;: &#x8B93;webpack&#x53EF;&#x4EE5;&#x57F7;&#x884C;&#x66F4;&#x5EE3;&#x6CDB;&#x7684;&#x4EFB;&#x52D9;</li>
+<li>
+<ol>
+<li>&#x5B89;&#x88DD; html &#x63D2;&#x4EF6;</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">npm install --save-dev html-webpack-plugin@4.3.0
+</pre><ul>
+<li>
+<ol start="2">
+<li>&#x914D;&#x7F6E; html&#x63D2;&#x4EF6;</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token comment">// &#x65BC; webpack.config.js &#x5728;&#x9802;&#x90E8;&#x65B0;&#x589E; </span>
+<span class="token keyword">const</span> <span class="token maybe-class-name">HtmlWebpackPlugin</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;html-webpack-plugin&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><ul>
+<li>
+<ol start="3">
+<li>&#x63D2;&#x4EF6;&#x914D;&#x7F6E;</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+  <span class="token comment">// &#x8A2D;&#x5B9A;&#x589E;&#x52A0;&#x9700;&#x8981;&#x986F;&#x793A;&#x7684;&#x9801;&#x9762;</span>
+  <span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment">// &#x539F;&#x8CC7;&#x6599;&#x6A94;&#x6848;</span>
+    template<span class="token operator">:</span> <span class="token string">&apos;./index.html&apos;</span><span class="token punctuation">,</span>
+    <span class="token comment">// &#x8F38;&#x51FA;&#x6A94;&#x6848;&#x540D;</span>
+    filename<span class="token operator">:</span> <span class="token string">&apos;index.html&apos;</span><span class="token punctuation">,</span>
+    <span class="token comment">// &#x8A2D;&#x5B9A;&#x9700;&#x8981;&#x7684;&#x8CC7;&#x6E90;(entry)</span>
+    chunks<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&apos;index&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    minify<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// &#x5220;&#x9664; html &#x4E2D;&#x7684;&#x8A3B;&#x91CB;</span>
+      removeComments<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token comment">// &#x5220;&#x9664; html &#x4E2D;&#x7684;&#x7A7A;&#x683C;</span>
+      collapseWhitespace<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token comment">// &#x5220;&#x9664; html &#x6A19;&#x7C64;&#x7684;&#x96D9;&#x5F15;&#x865F;</span>
+      removeAttributeQuotes<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token comment">// &#x5C07; html &#x6587;&#x4EF6;&#x5167;&#x7684; css &#x58D3;&#x7E2E;</span>
+      minifyCSS<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token comment">// &#x5C07; html &#x6587;&#x4EF6;&#x5167;&#x7684; js &#x58D3;&#x7E2E;</span>
+      minifyJS<span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span>
+</pre><ul>
+<li>
+<ol start="4">
+<li>&#x9032;&#x884C;&#x7DE8;&#x8B6F;&#x8207;&#x6253;&#x5305;</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">npm run webpack
+</pre></li>
+</ul>
+<br>
+<h4 class="mume-header" id="%E4%B8%80%E4%BA%9B%E6%87%89%E7%94%A8">&#x4E00;&#x4E9B;&#x61C9;&#x7528;</h4>
+
+<h5 class="mume-header" id="%E8%99%95%E7%90%86-css-%E6%96%87%E4%BB%B6">&#x8655;&#x7406; css &#x6587;&#x4EF6;</h5>
+
+<ul>
+<li>
+<ol>
+<li>&#x52A0;&#x5165; css-loader</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">npm install --save-dev css-loader
+</pre><ul>
+<li>
+<ol start="2">
+<li>&#x65BC;&#x8981;&#x5F15;&#x5165;&#x7684;js&#x6A94;&#x6848;&#x9802;&#x90E8;&#x52A0;&#x5165; import &apos;./your.css&apos;;</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>&#x63A5;&#x4E0B;&#x4F86;&#x6709;&#x5169;&#x7A2E;&#x65B9;&#x5F0F;&#x8655;&#x7406;css&#x6587;&#x4EF6;</li>
+</ol>
+<ul>
+<li>
+<ol>
+<li>&#x65BC;html&#x6587;&#x4EF6;&#x52A0;&#x5165;style&#x5340;&#x584A;</li>
+</ol>
+<ul>
+<li>
+<ol>
+<li>&#x5B89;&#x88DD; style-loader</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">npm install --save-dev style-loader
+</pre><ul>
+<li>
+<ol start="2">
+<li>&#x5728; webpack.config &#x65B0;&#x589E;css&#x898F;&#x5247;</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">module<span class="token operator">:</span> <span class="token punctuation">{</span>
+  rules<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.css$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+      <span class="token comment">// &#x82E5;&#x6709;&#x591A;&#x500B;loader&#x5247;&#x7528;use,&#x6703;&#x5F9E;&#x6700;&#x5F8C;&#x4E00;&#x500B;&#x5F80;&#x524D;&#x4F7F;&#x7528;loader</span>
+      <span class="token comment">// css-loader &#x6703;&#x5148;&#x6293;&#x53D6;js&#x7684;css&#x6A94;&#x4E26;&#x900F;&#x904E;style-loader&#x5728;html&#x6A94;&#x751F;&#x6210;style&#x6A19;&#x7C64;</span>
+      use<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&apos;style-loader&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;css-loader&apos;</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+  <span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    template<span class="token operator">:</span> <span class="token string">&apos;./index.html&apos;</span><span class="token punctuation">,</span>
+    filename<span class="token operator">:</span> <span class="token string">&apos;index.html&apos;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span>
+</pre></li>
+<li>
+<ol start="2">
+<li>&#x4F7F;&#x7528; link &#x65B9;&#x5F0F;&#x5C0E;&#x5165; css</li>
+</ol>
+<ul>
+<li>
+<ol>
+<li>&#x5B89;&#x88DD; mini-css-extract-plugin</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">npm install --save-dev mini-css-extract-plugin
+</pre><ul>
+<li>
+<ol start="2">
+<li>&#x5728; webpack.config &#x65B0;&#x589E;css&#x898F;&#x5247;</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">const</span> <span class="token maybe-class-name">MiniCssExtractPlugin</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;mini-css-extract-plugin&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token operator">:</span> <span class="token punctuation">{</span>
+  rules<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.css$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+      <span class="token comment">// &#x82E5;&#x6709;&#x591A;&#x500B;loader&#x5247;&#x7528;use,&#x6CE8;&#x610F;&#x9019;&#x908A;&#x6703;&#x5F9E;&#x6700;&#x5F8C;&#x4E00;&#x500B;&#x5F80;&#x524D;&#x4F7F;&#x7528;loader</span>
+      <span class="token comment">// css-loader &#x6703;&#x5148;&#x5C07;js&#x7684;css&#x6A94;&#x6293;&#x53D6;&#x4E26;&#x900F;&#x904E;MiniCssExtractPlugin.loader&#x5728;html&#x6A94;&#x4F7F;&#x7528;link&#x5F15;&#x5165;css&#x6A94;</span>
+      use<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token maybe-class-name">MiniCssExtractPlugin</span><span class="token punctuation">.</span><span class="token property-access">loader</span><span class="token punctuation">,</span> <span class="token string">&apos;css-loader&apos;</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+  <span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    template<span class="token operator">:</span> <span class="token string">&apos;./index.html&apos;</span><span class="token punctuation">,</span>
+    filename<span class="token operator">:</span> <span class="token string">&apos;index.html&apos;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token keyword">new</span> <span class="token class-name">MiniCssExtractPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    filename<span class="token operator">:</span> <span class="token string">&apos;css/[name].css&apos;</span> <span class="token comment">// &#x9019;&#x908A;&#x6703;&#x518D;&#x8F38;&#x51FA;&#x76EE;&#x9304;&#x5728;&#x5275;&#x5EFA; css &#x8CC7;&#x6599;&#x593E;&#x4E26;&#x653E;&#x5165; css&#x6A94;&#x6848;(&#x9810;&#x8A2D;&#x70BA;main.css)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span>
+</pre></li>
+</ul>
+</li>
+</ul>
+<br>
+<h5 class="mume-header" id="%E8%99%95%E7%90%86-css-%E8%88%87-js-%E5%9C%96%E7%89%87">&#x8655;&#x7406; css &#x8207; js &#x5716;&#x7247;</h5>
+
+<ul>
+<li>
+<ol>
+<li>&#x5B89;&#x88DD;file-loader</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">npm install --save-dev file-loader
+</pre><ul>
+<li>
+<ol start="2">
+<li>&#x65B0;&#x589E; webpack.config &#x898F;&#x5247;</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">module<span class="token operator">:</span> <span class="token punctuation">{</span>
+  rules<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.css$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+      use<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token comment">// file-loader &#x6703;&#x628A; css &#x88E1;&#x9762;&#x5F15;&#x5165;&#x7684;&#x5716;&#x7247;&#x8DEF;&#x5F91;&#x63DB;&#x6389;&#x6210;&#x8F38;&#x51FA;&#x5F8C;&#x7684;&#x6A94;&#x540D;</span>
+      <span class="token comment">// &#x6CE8;&#x610F;:&#x82E5;&#x5716;&#x7247;&#x4E0D;&#x5728;&#x540C;&#x76EE;&#x9304;&#x5247;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x8A2D;&#x5B9A;publicPath&#x8DEF;&#x5F91;</span>
+      <span class="token comment">// &#x56E0;&#x9700;&#x8981;&#x5C07;&#x5716;&#x7247;&#x8A2D;&#x7F6E;&#x5728; img &#x8CC7;&#x6599;&#x593E;&#x8B93;css&#x6293;&#x53D6;&#x5716;&#x7247;,&#x6240;&#x4EE5;&#x9808;&#x7528;&#x6B64;&#x65B9;&#x5F0F;&#x4E26;&#x8A2D;&#x5B9A;publicPath&#x56DE;&#x4E0A;&#x4E00;&#x5C64;</span>
+        <span class="token punctuation">{</span>
+          loader<span class="token operator">:</span> <span class="token maybe-class-name">MiniCssExtractPlugin</span><span class="token punctuation">.</span><span class="token property-access">loader</span><span class="token punctuation">,</span>
+          options<span class="token operator">:</span> <span class="token punctuation">{</span>
+            publicPath<span class="token operator">:</span> <span class="token string">&apos;../&apos;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&apos;css-loader&apos;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// &#x8A2D;&#x5B9A; file-loader:&#x5728;&#x8F38;&#x51FA;&#x8CC7;&#x6599;&#x593E;&#x5275;&#x5EFA;img&#x8CC7;&#x6599;&#x593E;&#x4E26;&#x4FDD;&#x7559;&#x539F;&#x6A94;&#x540D;&#x8207;&#x526F;&#x6A94;&#x540D;</span>
+    <span class="token punctuation">{</span>
+      test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.(jpg|png|gif)$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+      use<span class="token operator">:</span> <span class="token punctuation">{</span>
+        loader<span class="token operator">:</span> <span class="token string">&apos;file-loader&apos;</span><span class="token punctuation">,</span>
+        options<span class="token operator">:</span> <span class="token punctuation">{</span>
+          name<span class="token operator">:</span> <span class="token string">&apos;img/[name].[ext]&apos;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+  <span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    template<span class="token operator">:</span> <span class="token string">&apos;./index.html&apos;</span><span class="token punctuation">,</span>
+    filename<span class="token operator">:</span> <span class="token string">&apos;index.html&apos;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token keyword">new</span> <span class="token class-name">MiniCssExtractPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    filename<span class="token operator">:</span> <span class="token string">&apos;css/[name].css&apos;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span>
+</pre><ul>
+<li>
+<ol start="3">
+<li>js &#x52A0;&#x8F09;&#x672C;&#x5730;&#x5716;&#x7247;</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token comment">// &#x5728; js &#x52A0;&#x5165;&#x8A72;&#x884C;&#x5373;&#x53EF;</span>
+<span class="token comment">// file-loader &#x6703;&#x81EA;&#x52D5;&#x89E3;&#x6790;&#x5C07;&#x88E1;&#x9762;&#x7684;&#x5716;&#x7247;&#x8907;&#x88FD;&#x5230; file-loader &#x8A2D;&#x5B9A;&#x7684;&#x8CC7;&#x6599;&#x593E;&#x88E1;&#x9762;</span>
+<span class="token keyword module">import</span> <span class="token imports">img</span> <span class="token keyword module">from</span> <span class="token string">&apos;./img/logo.png&apos;</span><span class="token punctuation">;</span>
+</pre><br>
+<h5 class="mume-header" id="%E8%99%95%E7%90%86-html-%E5%9C%96%E7%89%87">&#x8655;&#x7406; html &#x5716;&#x7247;</h5>
+
+<ul>
+<li>
+<ol>
+<li>&#x5B89;&#x88DD; html-withimg-loader</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">npm install --save-dev html-withimg-loader
+</pre><ul>
+<li>
+<ol start="2">
+<li>&#x65B0;&#x589E; webpack.config &#x898F;&#x5247;</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">module<span class="token operator">:</span> <span class="token punctuation">{</span>
+  rules<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.(jpg|png|gif)$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+      use<span class="token operator">:</span> <span class="token punctuation">{</span>
+        loader<span class="token operator">:</span> <span class="token string">&apos;file-loader&apos;</span><span class="token punctuation">,</span>
+        options<span class="token operator">:</span> <span class="token punctuation">{</span>
+          name<span class="token operator">:</span> <span class="token string">&apos;img/[name].[ext]&apos;</span><span class="token punctuation">,</span>
+          <span class="token comment">// &#x56E0; webpack &#x5C07; require() &#x8ABF;&#x7528;&#x89E3;&#x6790;&#x70BA;&#xFF1A;{ default: module } &#x6240;&#x4EE5;&#x8981;&#x8A2D;&#x70BA; false</span>
+          esModule<span class="token operator">:</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.(htm|html)$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+      loader<span class="token operator">:</span> <span class="token string">&apos;html-withimg-loader&apos;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</pre><br>
+<h5 class="mume-header" id="%E4%BD%BF%E7%94%A8-url-loader-%E8%99%95%E7%90%86%E5%9C%96%E7%89%87">&#x4F7F;&#x7528; url-loader &#x8655;&#x7406;&#x5716;&#x7247;</h5>
+
+<ul>
+<li>
+<ol>
+<li>&#x5B89;&#x88DD; url-loader</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">&#x56E0; url-loader &#x6703;&#x7528;&#x5230; file-loader &#x6240;&#x4EE5;&#x4E00;&#x4F75;&#x5B89;&#x88DD;
+npm install --save-dev file-loader
+npm install --save-dev url-loader
+</pre><ul>
+<li>
+<ol start="2">
+<li>&#x65B0;&#x589E; webpack.config &#x898F;&#x5247;</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token comment">// &#x82E5;&#x539F;&#x672C;&#x6709; file-loader &#x5247; &#x76F4;&#x63A5;&#x66FF;&#x63DB;&#x6210; url-loader &#x5373;&#x53EF;</span>
+<span class="token comment">// url-loader &#x6703;&#x8B80;&#x53D6;&#x5716;&#x7247;&#x5927;&#x5C0F;&#xFF0C;&#x82E5;&#x5C0F;&#x65BC;limit&#x7684;&#x5927;&#x5C0F;&#x5247;&#x8F49;&#x5316;&#x6210;base64&#x683C;&#x5F0F;&#x878D;&#x5165;&#x6587;&#x6A94;&#x4E2D;</span>
+<span class="token comment">// &#x7576;&#x5716;&#x7247;&#x5927;&#x5C0F;&#x8D85;&#x904E;limit&#x5247;&#x6703;&#x6539;&#x8ABF;&#x7528; file-loader &#x5C07;&#x5716;&#x7247;&#x8907;&#x88FD;&#x5230;&#x6307;&#x5B9A;&#x8DEF;&#x5F91;</span>
+module<span class="token operator">:</span> <span class="token punctuation">{</span>
+  rules<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.(jpg|png|gif)$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+      use<span class="token operator">:</span> <span class="token punctuation">{</span>
+        loader<span class="token operator">:</span> <span class="token string">&apos;url-loader&apos;</span><span class="token punctuation">,</span>
+        options<span class="token operator">:</span> <span class="token punctuation">{</span>
+          name<span class="token operator">:</span> <span class="token string">&apos;img/[name].[ext]&apos;</span><span class="token punctuation">,</span>
+          esModule<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+          limit<span class="token operator">:</span> <span class="token number">3000</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</pre><br>
+<h5 class="mume-header" id="%E4%BD%BF%E7%94%A8-webpack-dev-server-%E6%90%AD%E5%BB%BA%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83">&#x4F7F;&#x7528; webpack-dev-server &#x642D;&#x5EFA;&#x958B;&#x767C;&#x74B0;&#x5883;</h5>
+
+<ul>
+<li>
+<ol>
+<li>&#x5B89;&#x88DD; webpack-dev-server</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="txt" class="language-txt">npm install --save-dev webpack-dev-server
+</pre><ul>
+<li>
+<ol start="2">
+<li>&#x5728; package.json &#x5167; script &#x65B0;&#x589E;</li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token comment">//   &#x82E5;&#x4F7F;&#x7528; npm run dev &#x5247;&#x958B;&#x555F; server&#xFF0C;&#x5728;&#x6253;&#x5305;&#x5B8C;&#x6210;&#x5F8C;&#x81EA;&#x52D5;&#x6253;&#x958B; chrome &#x4F86;&#x67E5;&#x770B;&#x7D50;&#x679C;</span>
+<span class="token comment">//   webpack-dev-server &#x53EA;&#x8981;&#x5B58;&#x6A94;&#x5C31;&#x6703;&#x81EA;&#x52D5;&#x6253;&#x5305;&#x5728;&#x5167;&#x5B58;&#x4E26;&#x958B;&#x555F;&#x6307;&#x5B9A;&#x7684;&#x700F;&#x89BD;&#x5668;&#x9032;&#x884C;&#x5237;&#x65B0;</span>
+<span class="token string">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token string">&quot;dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;webpack-dev-server --open chrome&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</pre><ul>
+<li>&#x5099;&#x8A3B;</li>
+</ul>
+<blockquote>
+<p>webpack-dev-server &#x5728; webpack.config.js &#x6709;&#x9ED8;&#x8A8D;&#x8A2D;&#x5B9A;<br>
+&#x82E5;&#x8981;&#x6539;&#x8B8A;&#x5247;&#x65B0;&#x589E; devServer:{} &#x81EA;&#x884C;&#x8A2D;&#x5B9A;<br>
+<a href="https://www.webpackjs.com/configuration/dev-server/">devServer &#x8A73;&#x7D30;&#x8A2D;&#x5B9A;&#x53C3;&#x8003;</a></p>
+</blockquote>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
