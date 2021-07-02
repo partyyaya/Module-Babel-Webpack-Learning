@@ -125,7 +125,7 @@ output: {
   filename: '[name].js'
 }
 ```
-- 2.loader(使用 Babel 作範例)
+- 2.loader(使用 Babel 做參考)
   - loader官網: [loader](https://www.webpackjs.com/loaders/)
   - 使用目的: loader 讓 webpack 能夠去處理那些非 JS 文件的模塊
   - 1.安裝 babel-loader (讓webpack能使用Babel)
@@ -159,6 +159,162 @@ output: {
   ```txt
   npm run webpack
   ```
+- 3.plugins(使用 html插件 做參考)
+  - 使用目的: 讓webpack可以執行更廣泛的任務
+  - 1.安裝 html 插件
+  ```txt
+  npm install --save-dev html-webpack-plugin@4.3.0
+  ```
+  - 2.配置 html插件
+  ```js
+  // 於 webpack.config.js 在頂部新增 
+  const HtmlWebpackPlugin = require('html-webpack-plugin');
+  ```
+  - 3.插件配置
+  ```js
+  plugins: [
+    // 設定增加需要顯示的頁面
+    new HtmlWebpackPlugin({
+      // 原資料檔案
+      template: './index.html',
+      // 輸出檔案名
+      filename: 'index.html',
+      // 設定需要的資源(entry)
+      chunks: ['index'],
+      minify: {
+        // 删除 html 中的註釋
+        removeComments: true,
+        // 删除 html 中的空格
+        collapseWhitespace: true,
+        // 删除 html 標籤的雙引號
+        removeAttributeQuotes: true,
+        // 將 html 文件內的 css 壓縮
+        minifyCSS: true,
+        // 將 html 文件內的 js 壓縮
+        minifyJS: true
+      }
+    })
+  ]
+  ```
+  - 4.進行編譯與打包
+  ```txt
+  npm run webpack
+  ```
+
+#### 4. 一些應用
+##### 1. 處理 css 文件
+- 1.加入 css-loader
+```txt
+npm install --save-dev css-loader
+```
+- 2.於要引入的js檔案頂部加入 import './your.css';
+- 3.接下來有兩種方式處理css文件
+  - 1.於html文件加入style區塊
+    - 1.安裝 style-loader
+    ```txt
+    npm install --save-dev style-loader
+    ```
+    - 2.在 webpack.config 新增css規則
+    ```js
+    module: {
+      rules: [
+        {
+          test: /\.css$/,
+          // 若有多個loader則用use,會從最後一個往前使用loader
+          // css-loader 會先抓取js的css檔並透過style-loader在html檔生成style標籤
+          use: ['style-loader', 'css-loader']
+        }
+      ]
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        filename: 'index.html'
+      })
+    ]
+    ```
+  - 2.使用 link 方式導入 css
+    - 1.安裝 mini-css-extract-plugin
+    ```txt
+    npm install --save-dev mini-css-extract-plugin
+    ```
+    - 2.在 webpack.config 新增css規則
+    ```js
+    const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+    module: {
+      rules: [
+        {
+          test: /\.css$/,
+          // 若有多個loader則用use,注意這邊會從最後一個往前使用loader
+          // css-loader 會先將js的css檔抓取並透過MiniCssExtractPlugin.loader在html檔使用link引入css檔
+          use: [MiniCssExtractPlugin.loader, 'css-loader']
+        }
+      ]
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        filename: 'index.html'
+      }),
+      new MiniCssExtractPlugin({
+        filename: 'css/[name].css' // 這邊會再輸出目錄在創建 css 資料夾並放入 css檔案(預設為main.css)
+      })
+    ]
+    ```
+
+##### 2. 處理 css 與 js 的圖片
+- 1.安裝file-loader
+```txt
+npm install --save-dev file-loader
+```
+- 2.新增 webpack.config 規則
+```js
+module: {
+  rules: [
+    {
+      test: /\.css$/,
+      use: [
+      // file-loader 會把 css 裡面引入的圖片路徑換掉成輸出後的檔名
+      // 注意:若圖片不在同目錄則需要自己設定publicPath路徑
+      // 因需要將圖片設置在 img 資料夾讓css抓取圖片,所以須用此方式並設定publicPath回上一層
+        {
+          loader: MiniCssExtractPlugin.loader,
+          options: {
+            publicPath: '../'
+          }
+        },
+        'css-loader'
+      ]
+    },
+    // 設定 file-loader:在輸出資料夾創建img資料夾並保留原檔名與副檔名
+    {
+      test: /\.(jpg|png|gif)$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          name: 'img/[name].[ext]'
+        }
+      }
+    }
+  ]
+},
+plugins: [
+  new HtmlWebpackPlugin({
+    template: './index.html',
+    filename: 'index.html'
+  }),
+  new MiniCssExtractPlugin({
+    filename: 'css/[name].css'
+  })
+]
+```
+- 3.js 加載本地圖片
+```js
+// 在 js 加入該行即可
+// file-loader 會自動解析將裡面的圖片複製到 file-loader 設定的資料夾裡面
+import img from './img/logo.png';
+```
+
   
 
 

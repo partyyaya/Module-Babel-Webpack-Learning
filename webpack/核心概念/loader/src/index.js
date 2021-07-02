@@ -1,11 +1,11 @@
 import 'core-js/stable';
 
-let name = 'Alex';
+let name = 'mingming';
 const age = 18;
 console.log(name, age);
 
 const add = (x, y) => x + y;
-console.log(add(1, 1));
+console.log(add(2, 1));
 
 new Promise((resolve, reject) => {
   resolve('成功');
