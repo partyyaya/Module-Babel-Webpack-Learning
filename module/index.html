@@ -3,13 +3,19 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>export 和对应的 import</title>
+  <title>export 與 import</title>
 </head>
 
 <body>
   <script type="module">
-    import * as test from './module.js';
-    console.log(test.default.test);
+    let PC = true
+    if(PC){
+      import('./module.js').then((result)=>{
+        console.log(result.default.test)
+      }).catch();
+    }
+    // import * as test from './module.js';
+    // console.log(test.default.test);
   </script>
 </body>
 

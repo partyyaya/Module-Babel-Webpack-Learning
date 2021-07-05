@@ -114,12 +114,17 @@ export { age };
 ##### 細節注意事項
 - 1.模塊js內的this為undefined，一般js內的this為window
 - 2.import語句只能在最頂層，執行時其他代碼都未執行
-- 3.若要在代碼中執行則使用 import()
+- 3.若要在代碼執行時導入則使用 import()
 ```js
 if (PC) {
-  import('pc.js').then().catch();
+  let pcModule = await import('pc.js');
+  // 取得 export default
+  console.log(pcModule.default)
 } else if (Mobile) {
-  import('mobile.js').then().catch();
+  import('mobile.js').then((result)=>{
+    // 取得 export default
+    console.log(result.default)
+  }).catch();
 }
 ```
 
