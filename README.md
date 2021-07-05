@@ -2,12 +2,129 @@
 <a id="top"></a>
 
 ### 目錄列表
-#### [babel](#babel-start)
-#### [webpack](#webpack-start)
+#### [Module](#module-start)
+#### [Babel](#babel-start)
+#### [Webpack](#webpack-start)
 
 ---
+### <a id="module-start" href="#top" >Module</a>
 
-### <a id="babel-start" href="#top" >babel</a>
+#### 說明
+- 模塊的定義
+  - 局部作用域的代碼塊
+- 模塊主要解決問題分析
+  - 將功能切分模塊化
+  - 消除全局變量
+  - 模塊加載的順序
+
+#### 使用方法
+##### 使用 script tag 加載 module
+```html
+<script src="./your.js" type="module"></script>
+```
+##### 導出與導入
+- 導出與導入可分開存在
+- 被導入的 module 都會先執行一次
+  - 重複導入多次也只會執行一次
+- 使用方式
+```js
+/* 
+1. 使用 export default 導出導入
+一個 module 只能有一個 export default
+使用 export default 導出則導入時可以隨意命名
+*/
+// 導出
+export default { test:'test' };
+// 導入
+import m from './module.js'
+
+/* 
+2. 一般導出導入
+非 export default 不能随意命名
+使用一般導出必須命名否則導入無法呼叫
+*/
+// 導出
+export const age = 18;
+// 導入
+import { age } from './module.js';
+
+/*
+3. 複數導出導入
+導入時不用按照順序但要同名
+*/
+// 導出
+function fn() {}
+class className {}
+const age = 18;
+export { fn, className, age };
+// 導入
+import {age, fn, className} from './module.js'
+
+/*
+4. 導出導入使用別名
+*/
+// 導出
+export { fn as func, className, age };
+// 導入
+import { func, age, className as Person } from './module.js';
+
+/*
+5. 整體導入
+*/
+// 導出
+function fn() {}
+class className {}
+const age = 18;
+export { fn, className };
+export default age;
+// 導入
+import * as test from './module.js'
+// export default 可藉由 test.default 取得
+console.log(test.default.age)
+// 一般導出取值方式
+console.log(test.className)
+
+/*
+6. 同時導入
+export default 必須在最前面就導入
+*/
+// 導出
+function fn() {}
+class className {}
+const age = 18;
+export { fn, className };
+export default age;
+// 導入
+import age, { func, className } from './module.js';
+
+/*
+7. 導入與導出的複合寫法
+若用複合寫法導出的無法在當前模塊使用
+*/
+// 導出
+const age = 18;
+export { age };
+// 導入
+export { age } from './module.js';
+// 等於(但無法在當前模塊使用)
+import { age } from './module.js';
+export { age };
+```
+
+##### 細節注意事項
+- 1.模塊js內的this為undefined，一般js內的this為window
+- 2.import語句只能在最頂層，執行時其他代碼都未執行
+- 3.若要在代碼中執行則使用 import()
+```js
+if (PC) {
+  import('pc.js').then().catch();
+} else if (Mobile) {
+  import('mobile.js').then().catch();
+}
+```
+
+---
+### <a id="babel-start" href="#top" >Babel</a>
 
 #### 介紹
 - 官網: [babel](https://babeljs.io/)
@@ -52,7 +169,7 @@ Babel 一般需配合 Webpack 來編譯模塊語法
   ```
   - 3.執行 npm run build 即可編譯使用babel
 --- 
-### <a id="webpack-start" href="#top" >webpack</a>
+### <a id="webpack-start" href="#top" >Webpack</a>
 #### 介紹
 - 官網: [webpack](https://webpack.js.org/)
 ```txt
