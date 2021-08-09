@@ -1,7 +1,7 @@
 ## Module & Babel & Webpack
 <a id="user-content-top"></a>
 
-| &nbsp;&nbsp;&nbsp;目錄列表&nbsp;&nbsp;&nbsp; |
+| 目錄列表 |
 |:--|
 | [Module](#user-content-module-start) |
 | [Babel](#user-content-babel-start) |
