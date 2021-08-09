@@ -2,7 +2,8 @@
 <a id="user-content-top"></a>
 
 ### 目錄列表
-|:---|
+||
+|:--|
 | [Module](#user-content-module-start) |
 | [Babel](#user-content-babel-start) |
 | [Webpack](#user-content-webpack-start) |
