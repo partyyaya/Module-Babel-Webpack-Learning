@@ -2,12 +2,12 @@
 <a id="user-content-top"></a>
 
 ### 目錄
-- [Module](#user-content-module-start)
-- [Babel](#user-content-babel-start)
-- [Webpack](#user-content-webpack-start)
+- [Module](#user-content-module)
+- [Babel](#user-content-babel)
+- [Webpack](#user-content-webpack)
 
 ---
-### <a id="module-start" href="#user-content-top" >Module</a>
+### <a id="user-content-module" href="#user-content-top" >Module</a>
 
 #### 說明
 - 模塊的定義
@@ -129,7 +129,7 @@ if (PC) {
 ```
 
 ---
-### <a id="babel-start" href="#user-content-top" >Babel</a>
+### <a id="user-content-babel" href="#user-content-top" >Babel</a>
 
 #### 介紹
 - 官網: [babel](https://babeljs.io/)
@@ -174,7 +174,7 @@ Babel 一般需配合 Webpack 來編譯模塊語法
   ```
   - 3.執行 npm run build 即可編譯使用babel
 --- 
-### <a id="webpack-start" href="#user-content-top" >Webpack</a>
+### <a id="user-content-webpack" href="#user-content-top" >Webpack</a>
 #### 介紹
 - 官網: [webpack](https://webpack.js.org/)
 ```txt
