@@ -1,11 +1,10 @@
 ## Module & Babel & Webpack
 <a id="user-content-top"></a>
 
-| 目錄列表 |
-|:--|
-| [Module](#user-content-module-start) |
-| [Babel](#user-content-babel-start) |
-| [Webpack](#user-content-webpack-start) |
+### 目錄
+- [Module](#user-content-module-start)
+- [Babel](#user-content-babel-start)
+- [Webpack](#user-content-webpack-start)
 
 ---
 ### <a id="module-start" href="#user-content-top" >Module</a>
